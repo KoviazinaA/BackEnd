@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 def get_db_connection():
     conn = psycopg2.connect(host='localhost',
-                            database='poetry_db',
-                            user="postgres",
-                            password="KOV125456")
+                            database='db',
+                            user="user",
+                            password="dbpassword")
     return conn
 conn = get_db_connection()
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
