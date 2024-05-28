@@ -2,19 +2,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> Index </title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="../static/style.css">
 	</head>
 	<body>
-		<div align="center">
-		<div align="center" class="border">
+		<div>
 			<div class="header">
-				<h1 class="word">Index</h1>
+				<h1 class="word">Your first WebPage</h1>
 			</div>
+			<div class="text">
 				<h1 class="bottom">
-					Hi {{session.username}}!! Welcome to the index page...
+					Hi <span class="user">{{session.username}}</span>!! Welcome to the index page...
 				</h1>
-				<a href="{{ url_for('logout') }}" class="btn">Logout</a>
-		</div>
+			</div>
+			<div class ="click">
+					<a href="{{ url_for('logout') }}" class="btn">Logout</a>
+			</div>
 		</div>
 	</body>
 </html>
